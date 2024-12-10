@@ -1,0 +1,71 @@
+.contacts {
+  &__body {
+    display: grid;
+    @include onDesktop {
+      grid-template-columns: repeat(12, 1fr);
+      column-gap: 24px;
+    }
+  }
+  &__title {
+    @extend %section-title;
+  }
+  &__form {
+    @include adaptive-property(margin-bottom, 48, 80, 0);
+    @include onDesktop {
+      grid-column: 1 / 7;
+    }
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    @include onDesktop {
+      grid-column: 8 / -1;
+    }
+  }
+  &__subtitle {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #9393a3;
+  }
+  &__link {
+    color: #191919;
+  }
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+
+  &__item {
+    padding: 14px 16px;
+    border-radius: 8px;
+    background: rgb(249, 249, 249);
+    border: 2px solid transparent;
+    transition: 0.4s;
+    box-sizing: border-box;
+    &::placeholder {
+      color: #7e7e83;
+    }
+    &:hover {
+      border: 2px solid rgb(219, 219, 219);
+    }
+    &:hover::placeholder {
+      color: $text-color;
+    }
+    &:focus {
+      border: 2px solid #f98921;
+    }
+  }
+  &__message {
+    min-height: 148px;
+    margin-bottom: 16px;
+    color: #7e7e83;
+    &:hover {
+      color: $text-color;
+    }
+  }
+  &__button {
+    @extend %button;
+  }
+}

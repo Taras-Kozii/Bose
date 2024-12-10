@@ -1,0 +1,48 @@
+.recommended {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title {
+    align-self: flex-start;
+    @extend %section-title;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(280px, 600px));
+    column-gap: 24px;
+    @include adaptive-property(row-gap, 40, 56, 56);
+
+    @include onDesktop {
+      grid-template-columns: repeat(3, minmax(280px, 324px));
+    }
+  }
+}
+.item-recommended {
+  &__img {
+    position: relative;
+    width: 100%;
+    margin-bottom: 24px;
+    aspect-ratio: 1/1;
+
+    img {
+      @include ibg;
+    }
+  }
+  &__title {
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+  &__text p:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  &__text {
+    margin-bottom: 12px;
+  }
+  &__price {
+    font-weight: 700;
+  }
+}

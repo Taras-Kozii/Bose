@@ -1,0 +1,23 @@
+.about {
+  @include adaptive-property(padding-block, 48, 120, 120);
+  background-color: #fcfaef;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+
+    @include onTablet {
+      flex-direction: row;
+      row-gap: 0px;
+      @include adaptive-property(column-gap, 24, 24, 110);
+      justify-content: space-between;
+    }
+  }
+  &__title {
+    @extend %section-title;
+    margin-bottom: 0;
+    @include onTablet {
+      flex: 0 0 50%;
+    }
+  }
+}

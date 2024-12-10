@@ -1,0 +1,41 @@
+.sound-vision {
+  &__title {
+    @extend %section-title;
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+    @include adaptive-property(row-gap, 40, 56, 56);
+  }
+  &__images {
+    display: flex;
+    margin-bottom: 16px;
+    @include adaptive-property(column-gap, 20, 24, 24);
+  }
+  &__img {
+    position: relative;
+    flex: 0 1 50%;
+    @include adaptive-property(height, 130, 184, 324);
+
+    img {
+      @include ibg;
+    }
+  }
+
+  &__row-title {
+    font-weight: 700;
+    @include adaptive-property(font-size, 18, 24, 24);
+  }
+  &__button {
+    @extend %button;
+    color: $bg-color;
+    background-color: #f98921;
+    transition: $transition-duraction ease-in;
+
+    &:hover {
+      background-color: rgb(27, 33, 41);
+      transition: $transition-duraction ease-in-out;
+      color: #fff;
+    }
+  }
+}

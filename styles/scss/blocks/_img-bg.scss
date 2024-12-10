@@ -1,0 +1,13 @@
+.img-bg {
+  .parallax-block-img {
+    @include adaptive-property(height, 200, 400, 460);
+    background-image: url();
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    img {
+      display: none;
+    }
+  }
+}

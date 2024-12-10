@@ -1,0 +1,29 @@
+.page {
+  height: 100%;
+  @extend %main-text;
+  color: $text-color;
+  background-color: $bg-color;
+  
+  &__header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    
+  }
+}
+.wrapper {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  overflow: clip;
+}
+[class*="__container"] {
+  max-width: 1260px;
+  @include adaptive-property(padding-inline, 20, 72, 120);
+  margin: 0 auto;
+}
+[class*="__content"] {
+  padding-block: 10px;
+}
