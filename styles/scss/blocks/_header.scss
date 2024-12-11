@@ -27,9 +27,7 @@
   &__call {
     position: relative;
     z-index: 2;
-    svg {
-      @include adaptive-property(width, 152, 228, 228);
-      @include adaptive-property(height, 16, 24, 24);
+    img {
       @include ibg;
     }
   }

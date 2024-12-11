@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BANG & OLUFSEN</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..700&display=swap"
       rel="stylesheet"
-    />
+    >
+    <link rel="stylesheet" href="./styles/css/styles.min.css">
   </head>
   <body class="page">
     <div class="wrapper">
       <header class="header page__header">
         <div class="header__container">
           <div class="header__content">
-            <a href="" class="header__logo">BANG & OLUFSEN</a>
+            <a href="" class="header__logo">
+              <img src="./images/icons/logo.svg" alt="BANG & OLUFSEN">
+            </a>
             <div class="header__icons">
-              <a href="#" class="header__icon header__call"> </a>
+              <a href="#" class="header__icon header__call">
+                <img src="./images/icons/call.svg" alt="call-icon">
+              </a>
               <div class="header__icon header__burger burger">
                 <span></span>
               </div>
@@ -54,12 +59,12 @@
           <div class="hero__container">
             <h1 class="hero__title">
               Your senses.
-              <br />
+              <br>
               Set free.
             </h1>
           </div>
           <div class="hero__fullscreen">
-            <img src="" alt="" />
+            <img src="./images/fullscreen.webp" alt="fullscreen-photo">
           </div>
         </section>
         <section class="recommended main__recommended">
@@ -69,7 +74,7 @@
               <div class="recommended__items">
                 <article class="recommended__item item-recommended">
                   <div class="item-recommended__img">
-                    <img src="" alt="recommended-photo-1" />
+                    <img src="./images/recommended/recommended-1.webp" alt="recommended-photo-1">
                   </div>
                   <h3 class="item-recommended__title">
                     <a href="#" target="_blank">BEOSOUND A5</a>
@@ -85,7 +90,7 @@
                 </article>
                 <article class="recommended__item item-recommended">
                   <div class="item-recommended__img">
-                    <img src="" alt="recommended-photo-2" />
+                    <img src="./images/recommended/recommended-2.webp" alt="recommended-photo-2">
                   </div>
                   <h3 class="item-recommended__title">
                     <a href="#" target="_blank"> BEOPLAY HX</a>
@@ -101,7 +106,7 @@
                 </article>
                 <article class="recommended__item item-recommended">
                   <div class="item-recommended__img">
-                    <img src="" alt="recommended-photo-3" />
+                    <img src="./images/recommended/recommended-3.webp" alt="recommended-photo-3">
                   </div>
                   <h3 class="item-recommended__title">
                     <a href="#" target="_blank">BEOSOUND THEATRE</a>
@@ -125,16 +130,16 @@
               <div class="sound-vision__items">
                 <h2 class="sound-vision__title">
                   Sound. Vision.
-                  <br />
+                  <br>
                   It’s your pick.
                 </h2>
                 <article class="sound-vision__row">
                   <div class="sound-vision__images">
                     <div class="sound-vision__img">
-                      <img src="" alt="" />
+                      <img src="./images/sound-vision/sound-vision-1.webp" alt="sound-vision-photo_1">
                     </div>
                     <div class="sound-vision__img">
-                      <img src="" alt="" />
+                      <img src="./images/sound-vision/sound-vision-2.webp" alt="sound-vision-photo_2">
                     </div>
                   </div>
                   <h3 class="sound-vision__row-title">Portable speakers</h3>
@@ -142,10 +147,10 @@
                 <article class="sound-vision__row">
                   <div class="sound-vision__images">
                     <div class="sound-vision__img">
-                      <img src="" alt="" />
+                      <img src="./images/sound-vision/sound-vision-3.webp" alt="sound-vision-photo_3">
                     </div>
                     <div class="sound-vision__img">
-                      <img src="" alt="" />
+                      <img src="./images/sound-vision/sound-vision-4.webp" alt="sound-vision-photo_4">
                     </div>
                   </div>
                   <h3 class="sound-vision__row-title">Earphones</h3>
@@ -153,10 +158,10 @@
                 <article class="sound-vision__row">
                   <div class="sound-vision__images">
                     <div class="sound-vision__img">
-                      <img src="" alt="" />
+                      <img src="./images/sound-vision/sound-vision-6.webp" alt="sound-vision-photo_5">
                     </div>
                     <div class="sound-vision__img">
-                      <img src="" alt="" />
+                      <img src="./images/sound-vision/sound-vision-7.webp" alt="sound-vision-photo_6">
                     </div>
                   </div>
                   <h3 class="sound-vision__row-title">Smart Home</h3>
@@ -169,8 +174,8 @@
           </div>
         </section>
         <section class="main__img-bg img-bg">
-          <div class="parallax-block-img" style="--image-url: ">
-            <img src="" alt="" class="parallax-img" />
+          <div class="parallax-block-img" style="--image-url: url('./images/bg-section.webp')">
+            <img src="./images/bg-section.webp" alt="photo" class="parallax-img">
           </div>
         </section>
         <section class="main__about about">
@@ -202,14 +207,14 @@
                     required
                     placeholder="Name"
                     class="form__item"
-                  />
+                  >
                   <input
                     name="userEmail"
                     type="email"
                     required
                     placeholder="Email"
                     class="form__item"
-                  />
+                  >
                   <textarea
                     name="message"
                     placheholder="message"
@@ -226,7 +231,7 @@ Message</textarea
                       href="tel:+1 234 5555-55-55"
                       target="_blank"
                       class="contacts__link"
-                      >+1 234 5555-55-55</a
+                      >+1234 5555-55-55</a
                     >
                   </div>
                   <div class="contacts__item">
@@ -251,5 +256,6 @@ Message</textarea
         </section>
       </main>
     </div>
+    <script src="./scripts/main.js"></script>
   </body>
 </html>

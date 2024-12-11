@@ -17,12 +17,14 @@
     }
   }
   &__container {
-    position: absolute;
-    left: 0;
+    height: 100%;
+    position: relative;
     bottom: 0;
+    right: 0;
   }
   &__title {
-    position: relative;
+    position: absolute;
+    bottom: 0;
     font-weight: 700;
     line-height: 100%;
     color: $bg-color;

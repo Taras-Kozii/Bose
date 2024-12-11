@@ -1,5 +1,5 @@
 .about {
-  @include adaptive-property(padding-block, 48, 120, 120);
+  @include adaptive-property(padding-block, 38, 90, 110);
   background-color: #fcfaef;
   &__content {
     display: flex;

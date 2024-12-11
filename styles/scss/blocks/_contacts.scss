@@ -38,6 +38,9 @@
   row-gap: 16px;
 
   &__item {
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
     padding: 14px 16px;
     border-radius: 8px;
     background: rgb(249, 249, 249);
@@ -45,6 +48,8 @@
     transition: 0.4s;
     box-sizing: border-box;
     &::placeholder {
+      font-size: 14px;
+      line-height: 1.4;
       color: #7e7e83;
     }
     &:hover {
@@ -58,6 +63,7 @@
     }
   }
   &__message {
+    font-family: "Manrope", sans-serif;
     min-height: 148px;
     margin-bottom: 16px;
     color: #7e7e83;
@@ -67,5 +73,6 @@
   }
   &__button {
     @extend %button;
+    @include adaptive-property(width, 280, 600, 498);
   }
 }
