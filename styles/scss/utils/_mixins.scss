@@ -63,3 +63,28 @@
   object-fit: cover;
   object-position: center;
 }
+
+@mixin link-hover($before-color) {
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: $before-color;
+    border-radius: 5px;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: $transition-duraction ease;
+  }
+
+  &:hover:before {
+    opacity: 1;
+    transform: translateY(2px);
+    transition: $transition-duraction ease-in;
+  }
+}

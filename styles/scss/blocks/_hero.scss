@@ -30,6 +30,6 @@
     color: $bg-color;
     z-index: 2;
     @include adaptive-property(font-size, 36, 48, 56);
-    @include adaptive-property(margin-bottom, 86, 110, 110);
+    @include adaptive-property(margin-bottom, 40, 64, 64);
   }
 }

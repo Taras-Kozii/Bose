@@ -1,5 +1,5 @@
 .about {
-  @include adaptive-property(padding-block, 38, 90, 110);
+  @include adaptive-property(padding-block, 48, 120, 120);
   background-color: #fcfaef;
   &__content {
     display: flex;
@@ -19,5 +19,8 @@
     @include onTablet {
       flex: 0 0 50%;
     }
+  }
+  &__text p:not(:last-child) {
+    margin-bottom: 10px;
   }
 }

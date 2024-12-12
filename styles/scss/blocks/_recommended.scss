@@ -31,10 +31,12 @@
     }
   }
   &__title {
+    width: max-content;
     margin-bottom: 8px;
     font-weight: 700;
     font-size: 18px;
     text-transform: uppercase;
+    @include link-hover($text-color);
   }
   &__text p:not(:last-child) {
     margin-bottom: 10px;

@@ -1,17 +1,17 @@
 .main {
   &__recommended {
-    @include adaptive-property(margin-bottom, 86, 110, 110);
+    @include adaptive-property(margin-bottom, 96, 120, 120);
   }
   &__sound-vision {
-    @include adaptive-property(margin-bottom, 86, 110, 110);
+    @include adaptive-property(margin-bottom, 96, 120, 120);
   }
   &__hero {
     @include adaptive-property(margin-bottom, 64, 120, 120);
   }
   &__about {
-    @include adaptive-property(margin-bottom, 64, 140, 120);
+    @include adaptive-property(margin-bottom, 64, 120, 120);
   }
   &__contacts {
-    @include adaptive-property(margin-bottom, 54, 110, 110);
+    @include adaptive-property(margin-bottom, 64, 120, 120);
   }
 }

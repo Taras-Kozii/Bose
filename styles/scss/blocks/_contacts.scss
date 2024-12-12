@@ -30,6 +30,7 @@
   }
   &__link {
     color: #191919;
+    @include link-hover(#191919);
   }
 }
 .form {

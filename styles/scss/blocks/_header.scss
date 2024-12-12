@@ -7,7 +7,7 @@
   }
   &__icons {
     display: flex;
-    column-gap: 20px;
+    @include adaptive-property(column-gap, 24, 32, 32);
   }
   &__logo {
     position: relative;
@@ -22,14 +22,42 @@
   }
   &__icon {
     @include adaptive-property(width, 24, 32, 32);
-    @include adaptive-property(height, 24, 24, 32);
+    @include adaptive-property(height, 24, 32, 32);
   }
   &__call {
     position: relative;
     z-index: 2;
     img {
       @include ibg;
+      transition: $transition-duraction ease-in;
+
+    &:hover {
+      transform: scale(1.01) translateY(-2px) rotate(10deg);
     }
+    }
+  }
+  &__call:before {
+    content: "+1 234 5555-55-55";
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    display: block;
+    width: max-content;
+    margin-right: 24px;
+
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translate(20px, -50%);
+    transition: $transition-duraction ease-in;
+  }
+  &__call:hover:before {
+    opacity: 1;
+    transform: scaleX(1) translate(0px, -50%);
+    transition: $transition-duraction ease-in-out;
   }
   &__burger {
     position: relative;

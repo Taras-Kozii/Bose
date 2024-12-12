@@ -1,6 +1,7 @@
 .sound-vision {
   &__title {
     @extend %section-title;
+    margin-bottom: 0;
   }
   &__items {
     display: flex;
@@ -25,17 +26,12 @@
   &__row-title {
     font-weight: 700;
     @include adaptive-property(font-size, 18, 24, 24);
+    
+    a {
+      @include link-hover($text-color);
+    }
   }
   &__button {
     @extend %button;
-    color: $bg-color;
-    background-color: #f98921;
-    transition: $transition-duraction ease-in;
-
-    &:hover {
-      background-color: rgb(27, 33, 41);
-      transition: $transition-duraction ease-in-out;
-      color: #fff;
-    }
   }
 }
