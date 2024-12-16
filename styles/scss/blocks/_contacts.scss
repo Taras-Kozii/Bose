@@ -14,6 +14,9 @@
     @include onDesktop {
       grid-column: 1 / 7;
     }
+    opacity: 0;
+    transform: translateX(-250px);
+    transition: $transition-duraction ease-in;
   }
   &__items {
     display: flex;
@@ -22,6 +25,9 @@
     @include onDesktop {
       grid-column: 8 / -1;
     }
+    opacity: 0;
+    transform: translateX(250px);
+    transition: $transition-duraction ease-in;
   }
   &__subtitle {
     margin-bottom: 8px;
@@ -76,4 +82,15 @@
     @extend %button;
     @include adaptive-property(width, 280, 600, 498);
   }
+}
+
+.scroll-anim.active .contacts__form {
+  opacity: 1;
+  transform: translateX(0px);
+  transition: $transition-duraction ease-in-out;
+}
+.scroll-anim.active .contacts__items {
+  opacity: 1;
+  transform: translateX(0px);
+  transition: $transition-duraction ease-in-out;
 }

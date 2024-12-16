@@ -20,14 +20,21 @@
   }
 }
 .item-recommended {
+  position: relative;
   &__img {
     position: relative;
     width: 100%;
     margin-bottom: 24px;
     aspect-ratio: 1/1;
+    background-color: #F9F9F9;
 
     img {
       @include ibg;
+      transform: perspective(50px) scale(1) translateY(0px);
+      transition: $transition-duraction;
+      &:hover {
+        transform: scale(1.2) translateY(50px) rotateX(-10deg) rotateY(10deg);
+      }
     }
   }
   &__title {
@@ -47,4 +54,28 @@
   &__price {
     font-weight: 700;
   }
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transition: $transition-duraction linear;
+    z-index: 2;
+  }
+}
+.item-recommended:nth-child(1):before {
+  transition-delay: 0s;
+}
+.item-recommended:nth-child(2):before {
+  transition-delay: 0.2s;
+}
+.item-recommended:nth-child(3):before {
+  transition-delay: 0.4s;
+}
+.scroll-anim.active .item-recommended:before {
+  height: 0%;
 }

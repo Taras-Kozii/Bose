@@ -1,3 +1,8 @@
+:root {
+  --x: 0;
+  --y: 0;
+  }
+  
 .page {
   height: 100%;
   @extend %main-text;
@@ -30,6 +35,9 @@
 }
 .page.lock {
   overflow: clip;
+  .header__call {
+    z-index: -1;
+  }
 }
 
 .wrapper {

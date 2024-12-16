@@ -17,10 +17,29 @@
     position: relative;
     flex: 0 1 50%;
     @include adaptive-property(height, 130, 184, 324);
+    background-image: var(--image-url, '');
+    background-size: 180%;
+    background-position: 50% 50%;
 
     img {
       @include ibg;
+      transition: 0.2s;
+
+      &:hover {
+        opacity: 0;
+        transition: 0.2s;
+      }
     }
+  }
+  &__img:nth-child(even) {
+    opacity: 0;
+    transform: translateX(250px);
+    transition: $transition-duraction ease-in;
+  }
+  &__img:nth-child(odd) {
+    opacity: 0;
+    transform: translateX(-250px);
+    transition: $transition-duraction ease-in;
   }
 
   &__row-title {
@@ -34,4 +53,14 @@
   &__button {
     @extend %button;
   }
+}
+.scroll-anim.active .sound-vision__img:nth-child(even) {
+  opacity: 1;
+  transform: translateX(0px);
+  transition: $transition-duraction ease-in-out;
+}
+.scroll-anim.active .sound-vision__img:nth-child(odd) {
+  opacity: 1;
+  transform: translateX(0px);
+  transition: $transition-duraction ease-in-out;
 }
