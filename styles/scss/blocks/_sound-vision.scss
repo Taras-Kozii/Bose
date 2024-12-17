@@ -16,6 +16,7 @@
   &__img {
     position: relative;
     flex: 0 1 50%;
+    background-color: #F9F9F9;
     @include adaptive-property(height, 130, 184, 324);
     background-image: var(--image-url, '');
     background-size: 180%;
@@ -24,10 +25,12 @@
     img {
       @include ibg;
       transition: 0.2s;
+      background-color: #F9F9F9;
 
       &:hover {
         opacity: 0;
         transition: 0.2s;
+        cursor: zoom-in;
       }
     }
   }

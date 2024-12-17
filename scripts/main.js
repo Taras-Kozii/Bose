@@ -8,11 +8,15 @@ const burger = document.querySelector('.burger');
 const transitionTime = 400;
 const menuLinks = document.querySelectorAll('.menu__link');
 const pageTitle = document.querySelector('.hero__title');
-const parallaxImgs = document.querySelectorAll('.parallax-img');
+const parallaxImgs = document.querySelectorAll('.img-bg');
 const zoomImgs = document.querySelectorAll('.zoom-img');
 const imgs3d = document.querySelectorAll('.img-3d');
+const inkBlock = document.querySelector('.hero__fullscreen');
 
 window.addEventListener('load', () => {
+  inkBlock.classList.add('show');
+  header.classList.add('show');
+  pageTitle.classList.add('show');
   addGlassmorphToHeader();
 });
 window.addEventListener('scroll', () => {

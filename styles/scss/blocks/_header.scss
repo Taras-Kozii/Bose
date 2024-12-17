@@ -1,4 +1,7 @@
 .header {
+  opacity: 0;
+  transition: $transition-duraction linear 2s;
+
   &__content {
     position: relative;
     padding: 24px 0;
@@ -81,4 +84,7 @@
   opacity: 1;
   left: 0;
   transition: $transition-duraction ease-in;
+}
+.header.show {
+  opacity: 1;
 }
