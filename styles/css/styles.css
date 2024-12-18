@@ -219,12 +219,12 @@ body {
 
 .header {
   opacity: 0;
-  -webkit-transition: 0.4s linear 2s;
-  transition: 0.4s linear 2s;
+  -webkit-transition: opacity 0.4s linear 2s;
+  transition: opacity 0.4s linear 2s;
 }
 .header__content {
   position: relative;
-  padding: 24px 0;
+  padding: 24px 0px;
   min-height: 72px;
   display: -webkit-box;
   display: -ms-flexbox;

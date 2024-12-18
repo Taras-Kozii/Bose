@@ -16,7 +16,6 @@ const inkBlock = document.querySelector('.hero__fullscreen');
 document.addEventListener('DOMContentLoaded', () => {
   inkBlock.classList.add('show');
   header.classList.add('show');
-  pageTitle.classList.add('show');
   setBgImgContainer();
   addGlassmorphToHeader();
 });
@@ -29,9 +28,9 @@ window.addEventListener('scroll', () => {
 for (const link of menuLinks) {
   link.addEventListener('click', e => {
     e.preventDefault();
-    lockPage();
     burger.classList.toggle('active');
     menu.classList.toggle('active');
+    lockPage();
 
     window.scrollTo({
       top: getScrollToBlockValue(e.target),
@@ -53,7 +52,7 @@ burger.addEventListener('click', () => {
 for (const img of zoomImgs) {
   const imgContainer = img.parentElement;
   const imgSrc = img.getAttribute('src');
-  const newUrl = `url("../../.${imgSrc}")`;
+  const newUrl = 'url('+ '../.' + imgSrc + ')';
 
   imgContainer.addEventListener("mousemove", e => {
     imgContainer.style.backgroundPosition = -e.offsetX + 'px ' + -e.offsetY + 'px';
