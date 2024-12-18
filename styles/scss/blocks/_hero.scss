@@ -22,11 +22,11 @@
       display: none;
     }
   }
-  // &__fullscreen.show {
-  //   mask-image: url(../images/ink/ink.gif);
-  //   mask-size: cover;
-  //   mask-position: center;
-  // }
+  &__fullscreen.show {
+    mask-image: url(../../images/ink/ink.gif);
+    mask-size: cover;
+    mask-position: center;
+  }
   &__container {
     height: 100%;
     position: relative;
