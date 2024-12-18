@@ -158,11 +158,6 @@ body {
   min-width: 320px;
 }
 
-:root {
-  --x: 0;
-  --y: 0;
-}
-
 .page {
   height: 100%;
   color: #1B2129;
@@ -796,7 +791,7 @@ body {
   width: 100%;
   margin-bottom: 24px;
   aspect-ratio: 1/1;
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
 }
 .item-recommended__img img {
   position: absolute;
@@ -808,14 +803,15 @@ body {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  -webkit-transform: perspective(50px) scale(1) translateY(0px);
-          transform: perspective(50px) scale(1) translateY(0px);
+  -webkit-transform: perspective(300px) scale(1) translateY(0px) rotate(0deg);
+          transform: perspective(300px) scale(1) translateY(0px) rotate(0deg);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 .item-recommended__img img:hover {
-  -webkit-transform: scale(1.3) translateY(-50px) rotateX(-10deg) rotateY(10deg);
-          transform: scale(1.3) translateY(-50px) rotateX(-10deg) rotateY(10deg);
+  -webkit-transform: scale(1.3) translateY(-50px) rotate(-5deg);
+      -ms-transform: scale(1.3) translateY(-50px) rotate(-5deg);
+          transform: scale(1.3) translateY(-50px) rotate(-5deg);
   cursor: pointer;
 }
 .item-recommended__title {
@@ -891,7 +887,7 @@ body {
           transition-delay: 0.4s;
 }
 
-.scroll-anim.active .item-recommended:before {
+.scroll-anim.active.item-recommended:before {
   height: 0%;
 }
 
@@ -946,7 +942,7 @@ body {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 50%;
           flex: 0 1 50%;
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
   height: calc(130px + 54 * (100vw - 320px) / 424);
   background-image: var(--image-url, "");
   background-size: 180%;
@@ -974,7 +970,7 @@ body {
      object-position: center;
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
 }
 .sound-vision__img img:hover {
   opacity: 0;
@@ -1370,7 +1366,7 @@ body {
   }
 }
 
-.scroll-anim.active .contacts__form {
+.scroll-anim.active.contacts__form {
   opacity: 1;
   -webkit-transform: translateX(0px);
       -ms-transform: translateX(0px);
@@ -1379,7 +1375,7 @@ body {
   transition: 0.4s ease-in-out;
 }
 
-.scroll-anim.active .contacts__items {
+.scroll-anim.active.contacts__items {
   opacity: 1;
   -webkit-transform: translateX(0px);
       -ms-transform: translateX(0px);

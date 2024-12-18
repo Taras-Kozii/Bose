@@ -26,14 +26,14 @@
     width: 100%;
     margin-bottom: 24px;
     aspect-ratio: 1/1;
-    background-color: #F9F9F9;
+    background-color: #f9f9f9;
 
     img {
       @include ibg;
-      transform: perspective(50px) scale(1) translateY(0px);
+      transform: perspective(300px) scale(1) translateY(0px) rotate(0deg);
       transition: $transition-duraction;
       &:hover {
-        transform: scale(1.3) translateY(-50px) rotateX(-10deg) rotateY(10deg);
+        transform: scale(1.3) translateY(-50px) rotate(-5deg);
         cursor: pointer;
       }
     }
@@ -77,6 +77,6 @@
 .item-recommended:nth-child(3):before {
   transition-delay: 0.4s;
 }
-.scroll-anim.active .item-recommended:before {
+.scroll-anim.active.item-recommended:before {
   height: 0%;
 }

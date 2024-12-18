@@ -35,9 +35,9 @@
       @include ibg;
       transition: $transition-duraction ease-in;
 
-    &:hover {
-      transform: scale(1.01) translateY(-2px) rotate(10deg);
-    }
+      &:hover {
+        transform: scale(1.01) translateY(-2px) rotate(10deg);
+      }
     }
   }
   &__call:before {

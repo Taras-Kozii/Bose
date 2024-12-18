@@ -84,12 +84,12 @@
   }
 }
 
-.scroll-anim.active .contacts__form {
+.scroll-anim.active.contacts__form {
   opacity: 1;
   transform: translateX(0px);
   transition: $transition-duraction ease-in-out;
 }
-.scroll-anim.active .contacts__items {
+.scroll-anim.active.contacts__items {
   opacity: 1;
   transform: translateX(0px);
   transition: $transition-duraction ease-in-out;

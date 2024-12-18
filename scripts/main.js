@@ -13,12 +13,14 @@ const zoomImgs = document.querySelectorAll('.zoom-img');
 const imgs3d = document.querySelectorAll('.img-3d');
 const inkBlock = document.querySelector('.hero__fullscreen');
 
-window.addEventListener('load', () => {
+document.addEventListener('DOMContentLoaded', () => {
   inkBlock.classList.add('show');
   header.classList.add('show');
   pageTitle.classList.add('show');
+  setBgImgContainer();
   addGlassmorphToHeader();
 });
+
 window.addEventListener('scroll', () => {
   addGlassmorphToHeader();
   toggleAnimItems();
@@ -37,28 +39,6 @@ for (const link of menuLinks) {
     })
   });
 }
-
-for (const item of parallaxImgs) {
-  const itemContainer = item.parentElement;
-  const imgSrc = item.getAttribute('src');
-  const newUrl = `url("../../.${imgSrc}")`;
-  setCSSProperty(itemContainer, '--image-url', newUrl);
-}
-
-// for (const item of imgs3d) {
-//   item.addEventListener("mousemove", e => {
-//     const rect = e.target.getBoundingClientRect();
-//     const ratioX = (e.clientX - rect.left) / rect.width;
-//     const ratioY = (e.clientY - rect.top) / rect.height;
-
-//     const degX = 20 - 40 * ratioY;
-//     const degY = 40 * ratioX - 20;
-
-//     item.style.setProperty("--x", degX + "deg");
-//     item.style.setProperty("--y", degY + "deg");
-//   });
-// }
-
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   form.reset();
@@ -107,6 +87,15 @@ function setCSSProperty(item, property, value) {
   item.style.setProperty(property, value);
 }
 
+function setBgImgContainer() {
+  for (const item of parallaxImgs) {
+    const itemContainer = item.parentElement;
+    const imgSrc = item.getAttribute('src');
+    const newUrl = `url("../../.${imgSrc}")`;
+    setCSSProperty(itemContainer, '--image-url', newUrl);
+  }
+}
+
 function addGlassmorphToHeader() {
   const titleTop = pageTitle.getBoundingClientRect().top;
 
@@ -120,7 +109,7 @@ function toggleAnimItems(selector = '.scroll-anim') {
   const animItems = document.querySelectorAll(selector);
   
     animItems.forEach(item => {
-      if (isInView(item, 0.35)) {
+      if (isInView(item, 0.50)) {
         item.classList.add('active');
       } else {
         item.classList.remove('active');

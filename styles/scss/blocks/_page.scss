@@ -1,21 +1,16 @@
-:root {
-  --x: 0;
-  --y: 0;
-  }
-  
 .page {
   height: 100%;
   @extend %main-text;
   color: $text-color;
   background-color: $bg-color;
-  
+
   &__header {
     position: fixed;
     left: 0;
     top: 0;
     right: 0;
     z-index: 3;
-    
+
     &:before {
       content: "";
       display: block;
@@ -24,7 +19,7 @@
       top: 0;
       right: 0;
       height: 100%;
-      opacity: var(--before-opacity, '0');
+      opacity: var(--before-opacity, "0");
       background: rgba(236, 236, 236, 0.35);
       -webkit-backdrop-filter: blur(6px);
       backdrop-filter: blur(6px);
