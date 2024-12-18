@@ -698,14 +698,6 @@ body {
 .hero__fullscreen img {
   display: none;
 }
-.hero__fullscreen.show {
-  -webkit-mask-image: url(../images/ink/ink.gif);
-          mask-image: url(../images/ink/ink.gif);
-  -webkit-mask-size: cover;
-          mask-size: cover;
-  -webkit-mask-position: center;
-          mask-position: center;
-}
 .hero__container {
   height: 100%;
   position: relative;
