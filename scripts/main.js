@@ -91,7 +91,7 @@ function setBgImgContainer() {
   for (const item of parallaxImgs) {
     const itemContainer = item.parentElement;
     const imgSrc = item.getAttribute('src');
-    const newUrl = `url("../.${imgSrc}")`;
+    const newUrl = `url("../${imgSrc}")`;
     setCSSProperty(itemContainer, '--image-url', newUrl);
   }
 }
