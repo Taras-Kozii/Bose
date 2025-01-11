@@ -342,10 +342,10 @@ body {
 }
 .header__call:before {
   content: "+1 234 5555-55-55";
+  display: none;
   position: absolute;
   right: 50%;
   top: 50%;
-  display: block;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -361,6 +361,11 @@ body {
           transform: translate(20px, -50%);
   -webkit-transition: 0.4s ease-in;
   transition: 0.4s ease-in;
+}
+@media (min-width: 576px) {
+  .header__call:before {
+    display: inline-block;
+  }
 }
 .header__call:hover:before {
   opacity: 1;
